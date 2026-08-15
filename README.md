@@ -6,7 +6,7 @@ Repositório dedicado ao armazenamento, organização e versionamento dos códig
 
 ##  Tecnologias e Ferramentas
 * **Linguagens:** BASIC e demais tecnologias abordadas na disciplina.
-* **Ambiente de Testes:** OneCompiler / Compiladores específicos.
+* **Ambiente de Testes:** OneCompiler 
 * **Controle de Versão:** Git & GitHub
 
 ---
