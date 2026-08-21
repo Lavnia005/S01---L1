@@ -8,7 +8,7 @@ local base = tonumber(io.read())
 function gerarTabelaPotenciais(inicio, fim, base)
     for i = inicio, fim do
         local resultado = base ^ i
-        print(base.. " elevado a " .. i .. " = " .. resultado)
+        print(base.. " ^ " .. i .. " = " .. resultado)
     end
 end
 
