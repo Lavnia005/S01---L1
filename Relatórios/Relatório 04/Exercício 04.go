@@ -18,16 +18,16 @@ func main() {
 		fmt.Print("Digite o setor do ingresso: ")
 		fmt.Scanln(&setor)
 
-		fmt.Print("Digite o código do ingresso: ")
+		fmt.Print("Digite o codigo do ingresso: ")
 		fmt.Scanln(&codigo)
 
 		valido := validarIngresso(setor, codigo)
 
 		if valido {
-			fmt.Println("Acesso liberado à área VIP!")
+			fmt.Println("Acesso liberado a area VIP!")
 			break
 		} else {
-			fmt.Println("Ingresso ou setor inválido. Tente novamente.")
+			fmt.Println("Ingresso ou setor invalido. Tente novamente.")
 		}
 	}
 }
