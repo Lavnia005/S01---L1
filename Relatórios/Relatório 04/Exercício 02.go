@@ -19,13 +19,13 @@ func main() {
 	soma := venda1 + venda2 + venda3
 
 	if soma < 100 {
-		fmt.Println("Meta mínima anual não atingida!")
+		fmt.Println("Meta minima anual nao atingida!")
 	} else {
 		switch {
 		case soma >= 250:
 			fmt.Println("Categoria Top Seller")
 		case soma >= 180:
-			fmt.Println("Categoria Sênior")
+			fmt.Println("Categoria Senior")
 		default:
 			fmt.Println("Categoria Pleno")
 		}
