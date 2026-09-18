@@ -18,7 +18,7 @@ Prompt 1:
 Prompt 2:
 
 * **Prompt enviado:**
-  > Como faço para estruturar os atributos como private na classe LinkSocial e criar os getters e setters sem usar acentos e sem comentarios?
+  > Como faço para estruturar os atributos como private na classe LinkSocial e criar os getters e setters?
 
 * **Resposta obtida:** O Gemini **estruturou o encapsulamento** com atributos privados, implementou os **getters e setters** necessários e criou o método para **subir o rank** de forma segura e protegida.
 
@@ -36,15 +36,15 @@ Prompt 3:
 Prompt 4:
 
 * **Prompt enviado:**
-  > Como faço as classes Hobbit, Jardineiro, Cozinheiro e Fazendeiro usando polimorfismo com um array estático de ponteiros na main, sem usar vector e sem comentarios?
+  > Como faço as classes Hobbit, Jardineiro, Cozinheiro e Fazendeiro usando polimorfismo com um array estático de ponteiros na main, sem usar vector?
 
-* **Resposta obtida:** O Gemini **organizou a estrutura com métodos virtuais**, corrigiu a criação de um **array estático de ponteiros** e simplificou o **laço de repetição** para demonstrar o comportamento polimórfico de forma direta e sem comentários.
+* **Resposta obtida:** O Gemini **organizou a estrutura com métodos virtuais**, corrigiu a criação de um **array estático de ponteiros** e simplificou o **laço de repetição** para demonstrar o comportamento polimórfico de forma direta.
 
 ---
 
 ## 2. Relatório de Aprendizado
 
-* **Como a resposta ajudou na solução do problema:** A inteligência artificial foi **essencial para corrigir erros estruturais** nos códigos em C++, como a ausência de ponto e vírgula em classes, problemas de encapsulamento e a implementação correta de **herança com polimorfismo**.
+* **Como a resposta ajudou na solução do problema:** A inteligência artificial foi **essencial para corrigir erros estruturais** nos códigos em C++, como problemas de encapsulamento e a implementação correta de **herança com polimorfismo**.
 
 * **De que forma ela solucionou a sua dúvida:** Esclareceu o funcionamento da **visibilidade de atributos**, a utilidade de **getters e setters**, e como aplicar **ponteiros e métodos virtuais** para percorrer arrays de classes derivadas sem erros de compilação.
 
