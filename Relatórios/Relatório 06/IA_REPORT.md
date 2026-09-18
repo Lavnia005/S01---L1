@@ -9,7 +9,7 @@
 Prompt 1:
 
 * **Prompt enviado:**
-  > #include <iostream> ... class Banda { string nome; int integrantes; float potenciaSom; int energia; } ... me ajuda passo a passo
+  > Me ajuda passo a passo com a classe Banda em C++? Esqueci como coloca os atributos e o ponto e vírgula no final.
 
 * **Resposta obtida:** O Gemini **identificou a falta do ponto e vírgula** após a declaração da classe, corrigiu a visibilidade dos atributos para **public** e orientou sobre a passagem por referência no método de **duelo entre bandas**.
 
@@ -18,7 +18,7 @@ Prompt 1:
 Prompt 2:
 
 * **Prompt enviado:**
-  > #include <iostream> #include <string> using namespace std; class LinkSocial { private: string nome; string arcana; int rank; ... } ... SEM COMENTARIOS E SEM ACENTO
+  > Como faço para estruturar os atributos como private na classe LinkSocial e criar os getters e setters sem usar acentos e sem comentarios?
 
 * **Resposta obtida:** O Gemini **estruturou o encapsulamento** com atributos privados, implementou os **getters e setters** necessários e criou o método para **subir o rank** de forma segura e protegida.
 
@@ -27,7 +27,7 @@ Prompt 2:
 Prompt 3:
 
 * **Prompt enviado:**
-  > #include <iostream> ... class MembroInatel { public: string nome; void seApresentar() ... } ...
+  > Me mostra como criar a classe base MembroInatel e puxar as subclasses Aluno e Professor sobrescrevendo o metodo seApresentar com override.
 
 * **Resposta obtida:** O Gemini **ajudou na criação da classe base** e das subclasses **Aluno** e **Professor** utilizando herança, aplicando em seguida a **sobrescrita do método seApresentar** com a palavra-chave **override**.
 
@@ -36,7 +36,7 @@ Prompt 3:
 Prompt 4:
 
 * **Prompt enviado:**
-  > Crie as classes Hobbit, Jardineiro, Cozinheiro e Fazendeiro utilizando polimorfismo, vetor de ponteiros da classe base e percorra de forma simples sem usar vector.
+  > Como faço as classes Hobbit, Jardineiro, Cozinheiro e Fazendeiro usando polimorfismo com um array estático de ponteiros na main, sem usar vector e sem comentarios?
 
 * **Resposta obtida:** O Gemini **organizou a estrutura com métodos virtuais**, corrigiu a criação de um **array estático de ponteiros** e simplificou o **laço de repetição** para demonstrar o comportamento polimórfico de forma direta e sem comentários.
 
