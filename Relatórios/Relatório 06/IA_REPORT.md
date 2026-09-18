@@ -9,7 +9,7 @@
 Prompt 1:
 
 * **Prompt enviado:**
-  > Me ajuda passo a passo com a classe Banda em C++? Esqueci como coloca os atributos e o ponto e vírgula no final.
+  > Me ajuda passo a passo com a classe Banda em C++? 
 
 * **Resposta obtida:** O Gemini **identificou a falta do ponto e vírgula** após a declaração da classe, corrigiu a visibilidade dos atributos para **public** e orientou sobre a passagem por referência no método de **duelo entre bandas**.
 
