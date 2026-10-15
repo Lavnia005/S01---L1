@@ -1,51 +1,38 @@
-class Persona:
+class HeroiOverwatch:
 
-    def __init__(self, nome: str, arcano: str):
-        self.nome = nome
-        self.arcano = arcano
-
-    def invocar(self):
-        print(f"Persona: {self.nome} | Arcano: {self.arcano}")
-
-class Aliado:
-
-    def __init__(self, nome: str, codinome: str):
-        self.nome = nome
+    def __init__(self, codinome: str, funcao: str):
         self.codinome = codinome
+        self.funcao = funcao
 
-class Lider:
+    def usar_suprema(self):
+        print(f"{self.codinome} usa uma suprema genérica!")
 
-    def __init__(self, codinome: str):
-        self.codinome = codinome
+class HeroiTanque(HeroiOverwatch):
 
-        self.persona = Persona("Arsène", "Louco")
+    def usar_suprema(self):
+        print(f"{self.codinome} usa uma suprema de tanque!")
 
-        self._equipe = []
+class HeroiSuporte(HeroiOverwatch):
 
-    def recrutar(self, aliado: Aliado):
-        self._equipe.append(aliado)
-        print(f"{aliado.codinome} foi recrutado!")
+    def usar_suprema(self):
+        print(f"{self.codinome} usa uma suprema de suporte!")
 
-    def infiltrar(self, palacio: str):
-        print(f"\n--- Palácio de {palacio} ---")
-        print(f"{self.codinome} iniciou a infiltração!")
-
-        self.persona.invocar()
-
-        print("\n--- Equipe ---")
-
-        for aliado in self._equipe:
-            print(f"{aliado.codinome} ({aliado.nome})")
+    def curar_equipe(self):
+        print(f"{self.codinome} está curando a equipe!")
 
 
 if __name__ == "__main__":
 
-    aliado1 = Aliado("Ryuji Sakamoto", "Skull")
-    aliado2 = Aliado("Ann Takamaki", "Panther")
+    herois: list[HeroiOverwatch] = [
+        HeroiOverwatch("Soldier", "Dano"),
+        HeroiTanque("Reinhardt", "Tanque"),
+        HeroiSuporte("Mercy", "Suporte")
+    ]
 
-    joker = Lider("Joker")
+    print("--- Supremas dos Heróis ---")
 
-    joker.recrutar(aliado1)
-    joker.recrutar(aliado2)
+    for heroi in herois:
+        heroi.usar_suprema()
 
-    joker.infiltrar("Kamoshida")
+        if isinstance(heroi, HeroiSuporte):
+            heroi.curar_equipe()
