@@ -1,39 +1,44 @@
-class HeroiOverwatch:
+class MortoVivo:
 
-    def __init__(self, codinome: str, funcao: str):
-        self.codinome = codinome
-        self.funcao = funcao
+    def __init__(self, nome: str, almas: int, estus: int):
+        self.nome = nome       
+        self._almas = almas    
+        self.__estus = estus   
 
-    def usar_suprema(self):
-        print(f"{self.codinome} usa uma suprema genérica!")
+    def get_estus(self):
+        return self.__estus
 
-class HeroiTanque(HeroiOverwatch):
+    def set_estus(self, quantidade):
+        if quantidade >= 0 and quantidade <= 10:
+            self.__estus = quantidade
+        else:
+            print("Quantidade de Estus inválida!")
 
-    def usar_suprema(self):
-        print(f"{self.codinome} usa uma suprema de tanque!")
+    def mostrar_status(self):
+        return (f"Morto-vivo {self.nome} | "
+                f"Almas: {self._almas} | "
+                f"Estus: {self.__estus}")
 
+class Clerigo(MortoVivo):
 
-class HeroiSuporte(HeroiOverwatch):
+    def __init__(self, nome: str, almas: int, estus: int,
+                 milagre: str):
+        super().__init__(nome, almas, estus)
+        self.milagre = milagre
 
-    def usar_suprema(self):
-        print(f"{self.codinome} usa uma suprema de suporte!")
-      
-    def curar_equipe(self):
-        print(f"{self.codinome} está curando a equipe!")
+    def mostrar_status(self):
+        return (f"{super().mostrar_status()} | "
+                f"Milagre: {self.milagre}")
 
 
 if __name__ == "__main__":
 
-    herois: list[HeroiOverwatch] = [
-        HeroiOverwatch("Soldier", "Dano"),
-        HeroiTanque("Reinhardt", "Tanque"),
-        HeroiSuporte("Mercy", "Suporte")
-    ]
+    clerigo = Clerigo("Petrus", 2000, 5, "Lança de Luz")
 
-    print("--- Supremas dos Heróis ---")
+    print(clerigo.mostrar_status())
 
-    for heroi in herois:
-        heroi.usar_suprema()
+    clerigo.set_estus(15)
 
-        if isinstance(heroi, HeroiSuporte):
-            heroi.curar_equipe()
+    clerigo.set_estus(10)
+
+    print(clerigo.mostrar_status())
