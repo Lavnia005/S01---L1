@@ -1,4 +1,3 @@
-
 class Instrumentista
   attr_reader :nome, :instrumento
 
