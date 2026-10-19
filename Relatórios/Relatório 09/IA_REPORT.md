@@ -93,4 +93,53 @@ A agregação aparece no relacionamento entre o laboratório e os membros. Os ob
 
 ```ruby
 def admitir(membro)
-  @membros <<
+  @membros << membro
+  puts "Membro #{membro.numero} - #{membro.nome} admitido!"
+end
+```
+
+Na parte principal do programa, os membros são instanciados antes do laboratório e passados ao método `admitir`. Isso representa a agregação porque os membros existem independentemente do laboratório.
+
+O método `experimento(mensagem)` utiliza `.each` para percorrer os membros registrados e, em seguida, chama `enviar_dmail(mensagem)` no `PhoneWave` armazenado em `@phonewave`.
+
+### Prompt 4 — Exercício 4: Sherlock Holmes
+
+**Prompt enviado:**
+
+> No exercício de Sherlock Holmes, como faço para identificar quais objetos podem ser detidos sem precisar verificar diretamente se são da classe `SuspeitoDoCrime`? E qual é a diferença entre o módulo `Depoente` e o módulo `Detivel` nesse caso?
+
+**Resposta obtida:**
+
+O método `respond_to?(:ser_detido)` permite verificar se um objeto possui o método `ser_detido`. Com isso, o método `acionar_scotland_yard` pode selecionar somente os envolvidos que possuem essa capacidade:
+
+```ruby
+def acionar_scotland_yard
+  puts "\n--- Acionando Scotland Yard ---"
+
+  detidos = @envolvidos.select do |envolvido|
+    envolvido.respond_to?(:ser_detido)
+  end
+
+  detidos.each do |envolvido|
+    envolvido.ser_detido
+  end
+end
+```
+
+O método `.select` cria um novo array com os objetos que atendem à condição. Depois, `.each` percorre esse array e chama `ser_detido` para cada um deles.
+
+O módulo `Depoente` define um método que lança `NotImplementedError`, indicando que as classes que utilizarem esse comportamento devem fornecer sua própria implementação de `depor`.
+
+Já o módulo `Detivel` possui uma implementação pronta de `ser_detido`, que utiliza o atributo `nome` disponibilizado pela classe `Envolvido`.
+
+A classe `TestemunhaOcular` inclui somente `Depoente`, enquanto `SuspeitoDoCrime` inclui `Depoente` e `Detivel`. Por isso, somente os suspeitos são selecionados para serem detidos.
+
+## 2. Relatório de Aprendizado
+
+- **Como a resposta ajudou na solução dos problemas:** A inteligência artificial foi utilizada como apoio para esclarecer dúvidas específicas que surgiram durante a implementação dos exercícios. As orientações ajudaram a compreender melhor alguns detalhes da sintaxe Ruby e a conferir se os métodos estavam de acordo com os requisitos dos enunciados.
+
+- **De que forma ela solucionou as minhas dúvidas:** As respostas esclareceram a criação de getters e setters manuais, a utilização de `super`, a herança de construtores, o funcionamento do polimorfismo e o uso de métodos como `.each`, `.map`, `.select` e `respond_to?`. Também ajudaram a diferenciar composição e agregação e a entender a finalidade dos módulos.
+
+- **O que aprendi para aplicar em problemas futuros:** Aprendi a reaproveitar métodos e construtores por meio da herança, a sobrescrever comportamentos nas classes filhas e a controlar o acesso aos atributos. Também compreendi como organizar objetos relacionados, definir comportamentos por meio de módulos e utilizar o polimorfismo para executar ações diferentes por meio de uma mesma chamada de método.
+
+- **Como utilizei a inteligência artificial:** O ChatGPT foi utilizado como ferramenta de consulta para esclarecer dúvidas pontuais sobre os conceitos de Orientação a Objetos em Ruby. As respostas serviram como apoio ao estudo e à compreensão dos exemplos, relacionando os conceitos teóricos com as situações apresentadas nos exercícios.
