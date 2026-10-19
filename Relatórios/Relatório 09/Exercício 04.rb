@@ -1,4 +1,3 @@
-
 module Depoente
   def depor
     raise NotImplementedError, "A classe deve implementar depor"
