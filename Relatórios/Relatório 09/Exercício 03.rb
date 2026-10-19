@@ -1,4 +1,3 @@
-
 class PhoneWave
   def enviar_dmail(mensagem)
     puts "Mensagem: #{mensagem}"
