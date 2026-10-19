@@ -1,4 +1,3 @@
-
 class CoquetelAfterlife
   attr_reader :nome
 
