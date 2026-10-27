@@ -10,7 +10,7 @@
 
 **Prompt enviado:**
 
-> No exercício de Pokémon, por que preciso declarar `#vida` como atributo privado e criar `get vida()` em vez de acessar a vida diretamente? Como faço para garantir que ela não fique negativa no método `sofrerDano(pontos)`?
+> por que preciso declarar `#vida` como atributo privado e criar `get vida()` em vez de acessar a vida diretamente? Como faço para garantir que ela não fique negativa no método `sofrerDano(pontos)`?
 
 **Resposta obtida:**
 
@@ -36,7 +36,7 @@ Assim, quando o dano ultrapassa a vida restante, ela é ajustada para zero. O ge
 
 **Prompt enviado:**
 
-> No exercício de Valorant, como o método `entrarEmCombate()` consegue acessar o modelo da pistola se o atributo `#pistola` é privado? E por que `usarHabilidade()` na classe `AgenteProtocolo` lança um erro, enquanto as classes filhas retornam um texto?
+> o método `entrarEmCombate()` consegue acessar o modelo da pistola se o atributo `#pistola` é privado? E por que `usarHabilidade()` na classe `AgenteProtocolo` lança um erro, enquanto as classes filhas retornam um texto?
 
 **Resposta obtida:**
 
@@ -48,7 +48,7 @@ O método `usarHabilidade()` da classe base lança um erro para indicar que o co
 
 **Prompt enviado:**
 
-> No exercício de Gravity Falls, por que a ficha é criada dentro do método `anotar()` do diário, mas os funcionários são criados antes da Cabana do Mistério? Como isso representa composição e agregação?
+> no exercício de Gravity Falls, por que a ficha é criada dentro do método `anotar()` do diário, mas os funcionários são criados antes da Cabana do Mistério? Como isso representa composição e agregação?
 
 **Resposta obtida:**
 
@@ -60,7 +60,7 @@ Já os funcionários são instanciados separadamente antes da cabana e depois en
 
 **Prompt enviado:**
 
-> No exercício de Hunter x Hunter, como o método `buscarAranha(numero)` pode encontrar uma Aranha pelo número usando `find`? E o que acontece se nenhuma Aranha tiver o número informado?
+> como o método `buscarAranha(numero)` pode encontrar uma Aranha pelo número usando `find`? E o que acontece se nenhuma Aranha tiver o número informado?
 
 **Resposta obtida:**
 
